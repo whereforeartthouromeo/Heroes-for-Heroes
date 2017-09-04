@@ -1,2 +1,3 @@
-# Hospital Heroes
-A website for the non profit organization Heroes for Heroes
+<h1>Oops! Did you mean:</h1>
+
+http://www.hospital-heroes.org/home ?
