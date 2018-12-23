@@ -15,7 +15,12 @@
 	<link rel='stylesheet' id='homesite17-master-style-css'  href='style.css' type='text/css' media='all' />
 	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQEBAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiIiIiIiIiIiIiIREhESIiIREhECERIREhESEQIREhESERIRAhESERIREhECERIREhESEQIREhESERERAhERERIRERACEREREhESEQIREhESERIRAhESERIREhESERIREiIiERIREiIiIiIiIiIiIiIiIiIiIiIiIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
 	<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-d3ad50db48a301d9b185b1ca6f32b92c19645ba69f8f9bdb9de0fcf143cb7d64.css" integrity="sha256-061Q20ijAdmxhbHKbzK5LBlkW6afj5vbneD88UPLfWQ=" media="all" rel="stylesheet" />
-  <style>
+ 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	
+	<style>
+		
+.mySlides {display:none;}
     
 	.grow {
 		position: absolute;
@@ -299,36 +304,6 @@ a.before:hover:before,a.after:hover:after{
 	  
 	</style>
 	
-	<script>
-		var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
-	</script>
   </head>
   
 <header class="Header  f5" role="banner">
@@ -361,46 +336,39 @@ function showSlides(n) {
     <header>
 		<h2 class="center">Hospital Heroes 2018 Blood Drive</h2>
 		<p>The Hospital Heroes team sponsored and promoted an American Red Cross blood drive at College View School in Glendale, California. The blood drive took place on December 21, 2018 from 1:00 to 6:00 P.M. and had 22 donations.</p>
-	    	
-		<div class="slideshow-container">
-  			<div class="mySlides fade">
-   				 <div class="numbertext">1 / 5</div>
-    					<img src="images/giraffe.jpg" style="width:100%">
-    				<div class="text">College View Mascot</div>
-  			</div>
 
-  			<div class="mySlides fade">
-    				<div class="numbertext">2 / 5</div>
-    					<img src="images/atwork.jpg" style="width:100%">
-    				<div class="text">Working the registration table</div>
-  			</div>
+		<h2 class="w3-center">Manual Slideshow</h2>
 
-  			<div class="mySlides fade">
-    				<div class="numbertext">3 / 5</div>
-    					<img src="images/merrychristmas.jpg" style="width:100%">
- 			 </div>
-			<div class="mySlides fade">
-    				<div class="numbertext">4 / 5</div>
-    					<img src="images/shoulders.jpg" style="width:100%">
-    				<div class="text">Fun outside the building</div>
-  			</div>
-			<div class="mySlides fade">
-    				<div class="numbertext">5 / 5</div>
-    					<img src="images/signoutside.jpg" style="width:100%">
-    				<div class="text">The welcome sign to the blood drive</div>
-  			</div>
+		<div class="w3-content w3-display-container">
+  			<img class="mySlides" src="images/giraffe.jpg" style="width:100%">
+ 			<img class="mySlides" src="images/atwork.jpg" style="width:100%">
+  			<img class="mySlides" src="images/shoulders.jpg" style="width:100%">
+ 			<img class="mySlides" src="images/signoutside.jpg" style="width:100%">
 
-		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 		</div>
 
-	<div style="text-align:center">
-  		<span class="dot" onclick="currentSlide(1)"></span> 
-  		<span class="dot" onclick="currentSlide(2)"></span> 
-  		<span class="dot" onclick="currentSlide(3)"></span> 
-		<span class="dot" onclick="currentSlide(4)"></span> 
-		<span class="dot" onclick="currentSlide(5)"></span> 
-	</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
 		
 		<br><br>
 		<h2 class="center">What is our goal?</h2>
