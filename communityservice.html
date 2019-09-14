@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" class="no-js">
+
+<head>
+
+	<meta name = "author" content = "Keegan Schmit">
+        <meta name = "keywords" content = "Hospital Heroes">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hospital Heroes</title>
+
+	<link rel='stylesheet' id='homesite17-master-style-css'  href='style.css' type='text/css' media='all' />
+	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQEBAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIiIiIiIiIiIiIiIREhESIiIREhECERIREhESEQIREhESERIRAhESERIREhECERIREhESEQIREhESERERAhERERIRERACEREREhESEQIREhESERIRAhESERIREhESERIREiIiERIREiIiIiIiIiIiIiIiIiIiIiIiIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+	<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-d3ad50db48a301d9b185b1ca6f32b92c19645ba69f8f9bdb9de0fcf143cb7d64.css" integrity="sha256-061Q20ijAdmxhbHKbzK5LBlkW6afj5vbneD88UPLfWQ=" media="all" rel="stylesheet" />
+ 	<link rel="stylesheet" href="slides.css">
+
+	
+	<style>
+		
+.mySlides {display:none;}
+    
+	.grow {
+		position: absolute;
+		top: 345px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		display: block;
+		transition: height 0.5s;
+		-webkit-transition: height 0.5s;
+		overflow: hidden;
+	}
+    .grow h1 {
+		font-weight: bold;
+		color: white;
+		font-size: 50px;
+		margin: 55px 0 0;
+		text-transform: uppercase;
+		letter-spacing: .75px;
+		padding: 0;
+	  
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: .4s ease-in-out;
+		transition: .4s ease-in-out;
+      
+    }
+    .grow h1 a {
+		color: #fff; 
+    }
+	
+    .grow h2 {
+		margin-top: 0;
+		color: white;
+		font-size: 17px;
+		font-family: georgia;
+		font-style: italic;
+	  
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: .4s ease-in-out;
+		transition: .4s ease-in-out;
+    }
+	.grow figure:hover h1{
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+	
+	.grow figure:hover h2{
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+	}
+		
+	
+	.hover09 figure img {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
+	}
+	
+	.hover09 figure:hover img {
+		-webkit-filter: grayscale(0);
+		filter: grayscale(0);
+	
+	}
+	
+	a.before:before,a.after:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+}
+a.before:before{
+  top:-0.25em;
+}
+a.after:after{
+  bottom:-0.25em;
+}
+a.before:before,a.after:after{
+  height:5px;
+  height:0.35rem;
+  width:0;
+  background:#006cb8;
+}
+a.first:after{
+  left:0;
+}
+a.second:after{
+  right:0;
+}
+a.third:after,a.sixth:before,a.sixth:after{
+  left:50%;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
+}
+a.fourth:before,a.fourth:after{
+  left:0;
+}
+a.fifth:before,a.fifth:after{
+  right:0;
+}
+a.seventh:before{
+  right:0;
+}
+a.seventh:after{
+  left:0;
+}
+a.eigth:before{
+  left:0;
+}
+a.eigth:after{
+  right:0;
+}
+a.before:hover:before,a.after:hover:after{
+  width:100%;
+}
+.square{
+  box-sizing:border-box;
+  margin-left:-0.4em;
+  position:relative;
+  font-size:1em;
+  overflow:hidden;
+  padding-bottom:5px;
+  padding-top:5px;
+}
+.square a{
+  position:static;
+  font-size:100%;
+  padding:0.2em 0.4em;
+  text-decoration: none;
+  padding-bottom:5px;
+  padding-top:5px;
+}
+.square:before,.square:after{
+  content: "";
+  box-sizing:border-box;
+  transition:0.25s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+  width:5px;
+  width:0.35rem;
+  height:0;
+  background:#006cb8;
+}
+.square:before{
+  left:0;
+  bottom:-0.2em;
+}
+.square.individual:before{
+  transition-delay:0.6s;
+}
+.square:after{
+  right:0;
+  top:-0.2em;
+}
+.square.individual:after{
+  transition-delay:0.2s;
+}
+.square a:before{
+  left:0;
+  transition:0.25s all ease;
+}
+.square a:after{
+  right:0;
+  transition:0.25s all ease;
+}
+.square.individual a:after{
+  transition:0.25s all ease 0.4s;
+}
+.square:hover:before,.square:hover:after{
+  height:calc(100% + 0.4em);
+}
+.square:hover a:before,.square:hover a:after{
+  width:100%;
+}
+.br {
+	display: block;
+   margin: 5px;
+}
+.wrapper {
+	padding-bottom:5px;
+  padding-top:7px;
+}
+	 * {box-sizing:border-box}
+
+	</style>
+	
+  </head>
+  
+<header class="Header  f5" role="banner">
+	<div class="d-flex px-3 flex-justify-between container-lg">
+		<div class="d-flex flex-justify-between">
+			<a class="header-logo-invertocat" href="https://hospitalheroes.org"  aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+				<br><br><br><br><br>
+			</a>
+			
+	<img STYLE="position:absolute;TOP:25px;LEFT:0%;WIDTH:100%;HEIGHT:102px" src="images/Capture.jpg">
+	
+	<body class="home page-template page-template-homepage page-template-homepage-php page page-id-64 normal-home splash-panel">
+		<header role="banner">
+			<a id="skiplinks" href="#main-content" data-ga-category="Skip links" data-ga-action="header" data-ga-label="Skip to content">Skip to content</a>
+				<section id="brand-bar" data-ga-category="Brand bar" data-ga-action="Gateway nav">
+					<a href="http://www.hospital-heroes.org/home" class="su-brand" rel="home" id="header--wordmark" data-ga-action="Wordmark">H-H</a>
+					<nav id="gateway" class="menu-gateway-nav-container"><ul id="menu-gateway-nav" class="menu"><li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="http://www.hospital-heroes.org/about">About</a></li>
+						<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="https://goo.gl/forms/CuDFYdjQHcj7U9yl2">Volunteer</a></li>
+						<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="https://goo.gl/forms/3eCRltIQpxUi0svC2">Refer a Child</a></li>
+						<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="http://www.hospital-heroes.org/contact">Contact</a></li>
+						<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="http://www.hospital-heroes.org/donate">Donate</a></li>
+					</ul>
+	
+		</header>
+	
+	</body>
+	
+	<section class="panel theme--white" data-type="section" data-modular-content data-js="panel" data-index="6">
+
+    <header>
+		<h2 class="center">Hospital Heroes 2018 Blood Drive</h2>
+		<p>The Hospital Heroes team sponsored and promoted an American Red Cross blood drive at College View School in Glendale, California. The blood drive took place on December 21, 2018 from 1:00 to 6:00 P.M. and had 22 donations.</p>
+	    
+		<div class="w3-content w3-display-container">
+  			<img class="mySlides" src="images/giraffe.jpg" style="width:100%">
+ 			<img class="mySlides" src="images/atwork.jpg" style="width:100%">
+  			<img class="mySlides" src="images/shoulders.jpg" style="width:100%">
+ 			<img class="mySlides" src="images/signoutside.jpg" style="width:100%">
+
+  			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+	
+		
+	</header>
+  
+  <section class="panel theme--white" data-type="section" data-modular-content data-js="panel" data-index="6">
+
+    <header>
+		<h2 class="center">Hospital Heroes 2019 Blood Drive</h2>
+		<p>The Hospital Heroes team sponsored and promoted an American Red Cross blood drive at the Lutheran Church in the Foothills in La Canada, California. The blood drive took place on July 5, 2019 from 12:30 to 6:00 P.M. and had 20 donations.</p>
+	    
+		<div class="w3-content w3-display-container">
+  			<img class="mySlides" src="images/blood drive signups.jpg" style="width:100%">
+ 		
+
+  			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+	
+		
+	</header>
+  
+  <section class="panel theme--white" data-type="section" data-modular-content data-js="panel" data-index="6">
+
+    <header>
+		<h2 class="center">Hospital Heroes 2019 Blood Drive</h2>
+		<p>The Hospital Heroes team sponsored and promoted an American Red Cross blood drive at the Lutheran Church in the Foothills in La Canada, California. The blood drive took place on July 5, 2019 from 12:30 to 6:00 P.M. and had 20 donations.</p>
+	    
+		<div class="w3-content w3-display-container">
+  			<img class="mySlides" src="images/blood drive signups.jpg" style="width:100%">
+ 		
+
+  			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+	
+		
+	</header>
+
+
+
+  </header>
+  
+  
+  
+  <footer data-ga-category="Footer">
+			
+			<center>
+				<div class="wrapper">
+				<span class="square">
+					<a class="tenth before after" href="http://www.hospital-heroes.org/people">People</a>
+				</span>
+				
+				<span class="square">
+				<a class="tenth before after" href="http://www.hospital-heroes.org/news">News</a>
+				</span>
+				
+				<span class="square">
+					<a class="tenth before after" href="http://www.hospital-heroes.org/about">About</a>
+					</span>
+				
+				<span class="square">
+					<a class="tenth before after" href="http://www.hospital-heroes.org/contact">Contact</a>
+					</span>
+				
+				<span class="square">
+					<a class="tenth before after" href="http://www.hospital-heroes.org/donate">Donate</a>
+					</span>
+				</div>
+			</center>
+			
+	
+		<center><section id="footer__global-footer" data-ga-action="Global footer">
+			
+		
+				<center>
+						
+					<h7>a Keegan Schmit production</h7>
+					<br>
+					<h7>Hospital Heroes © 2018</h7>
+					
+				</p></center>
+		</div>
+	</section></center>
+	</footer>
+	</body>
+</html>
